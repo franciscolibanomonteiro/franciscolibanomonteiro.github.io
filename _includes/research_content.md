@@ -12,15 +12,6 @@ Minimum wages (MW) can strongly compress current wage inequality by raising wage
 
 ### Working Papers
 
-**Taxing the Snapshot: Welfare Costs of Setting Progressivity Based on Cross-Sectional Inequality** <br>
-<details>
-<summary><strong>Abstract</strong></summary>
-<p>
-Progressive taxation is a redistributive tool, and governments raise or lower it in response to voter sentiment and to the academic and policy debate on inequality. That debate has emphasized a rise in inequality, but the statistics it relies on are almost always cross-sectional, and a snapshot mixes permanent differences with transitory differences that households insure themselves against. This paper asks how costly it is to base tax progressivity on snapshot inequality, as if the cross-section were the lifetime distribution, and what information closes the gap. I compare a <em>lifetime planner</em>, who knows the dynamics of productivity, with a <em>snapshot planner</em>, who observes only the cross-sectional distribution of wages and reads it as a distribution of permanent types, as static optimal-tax analysis does. Both are utilitarian and both choose the progressivity parameter of a Heathcote–Storesletten–Violante tax function. In a tractable framework, the snapshot planner always chooses too much progressivity when part of the cross-section is insurable, the loss is second order in the bias, and the cross-sections of hours or of consumption reveal the insurable share without any panel data. In a calibrated Bewley economy with endogenous labor supply and the cross-sectional wage dispersion of Portugal, whose statutory income tax I estimate to have progressivity 0.14, the snapshot planner sets progressivity of 0.39 against a lifetime optimum of 0.12 when productivity shocks are i.i.d., at a welfare cost of 2.9 percent of consumption. Holding the cross-sectional variance fixed, raising the persistence of shocks to 0.95 lifts the lifetime optimum to 0.37 and shrinks the cost to a fiftieth of a percent: the snapshot misleads in proportion to the share of the cross-section that is not close to permanent. Moving three quarters of the variance into a fixed effect has the same effect, and when all dispersion is permanent the two planners coincide. The snapshot is expensive only where much of the cross-section is transitory or mean-reverting, and it is then expensive in the direction of too much progressivity.
-</p>
-</details>
-<br>
-
 **Decomposing Changes in Income Mobility** <br>
 <details>
 <summary><strong>Abstract</strong></summary>
@@ -73,6 +64,15 @@ Energy use and CO₂ emissions dropped, but mostly because of the persistent dec
 ---
 
 ### Work in Progress
+
+**Taxing the Snapshot: Welfare Costs of Setting Progressivity Based on Cross-Sectional Inequality** <br>
+<details>
+<summary><strong>Abstract</strong></summary>
+<p>
+Progressive taxation is a redistributive tool, and governments raise or lower it in response to voter sentiment and to the academic and policy debate on inequality. That debate has emphasized a rise in inequality, but the statistics it relies on are almost always cross-sectional, and a snapshot mixes permanent differences with transitory differences that households insure themselves against. This paper asks how costly it is to base tax progressivity on snapshot inequality, as if the cross-section were the lifetime distribution, and what information closes the gap. I compare a <em>lifetime planner</em>, who knows the dynamics of productivity, with a <em>snapshot planner</em>, who observes only the cross-sectional distribution of wages and reads it as a distribution of permanent types, as static optimal-tax analysis does. Both are utilitarian and both choose the progressivity parameter of a Heathcote–Storesletten–Violante tax function. In a tractable framework, the snapshot planner always chooses too much progressivity when part of the cross-section is insurable, the loss is second order in the bias, and the cross-sections of hours or of consumption reveal the insurable share without any panel data. In a calibrated Bewley economy with endogenous labor supply and the cross-sectional wage dispersion of Portugal, whose statutory income tax I estimate to have progressivity 0.14, the snapshot planner sets progressivity of 0.39 against a lifetime optimum of 0.12 when productivity shocks are i.i.d., at a welfare cost of 2.9 percent of consumption. Holding the cross-sectional variance fixed, raising the persistence of shocks to 0.95 lifts the lifetime optimum to 0.37 and shrinks the cost to a fiftieth of a percent: the snapshot misleads in proportion to the share of the cross-section that is not close to permanent. Moving three quarters of the variance into a fixed effect has the same effect, and when all dispersion is permanent the two planners coincide. The snapshot is expensive only where much of the cross-section is transitory or mean-reverting, and it is then expensive in the direction of too much progressivity.
+</p>
+</details>
+<br>
 
 **Dynamics of Greenfield Development** [📄 Slides](/files/Dynamics_of_Greenfield_Development_Slides.pdf) [📽️ Video](https://www.youtube.com/watch?v=ngF0-FqzKQA) <br>
 _With Vernon Henderson, Guy Michaels, Martina Manara, and Tanner Regan_ <br>
