@@ -12,7 +12,7 @@ Minimum wages (MW) can strongly compress current wage inequality by raising wage
 
 ### Working Papers
 
-**Taxing the Snapshot: The Welfare Costs of Setting Progressivity on Current Inequality** <br>
+**Taxing the Snapshot: Welfare Costs of Setting Progressivity Based on Cross-Sectional Inequality** <br>
 <details>
 <summary><strong>Abstract</strong></summary>
 <p>
