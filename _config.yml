@@ -12,7 +12,7 @@ url: "https://franciscolibanomonteiro.github.io"
 baseurl: ""  # Leave empty for personal GitHub Pages site
 repository: "franciscolibanomonteiro/franciscolibanomonteiro.github.io"
 icon: "favicon.ico"  # Place this image in /images
-title_separator: "|"
+title_separator: "–"
 google_site_verification: "B8Y-rUwDJdHj7kV5f9wdwFyFeuLjtUsDquK2VB4w4mA"
 
 author:
