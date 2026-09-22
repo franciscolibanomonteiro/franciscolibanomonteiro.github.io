@@ -33,6 +33,7 @@ I apply this formula using a rich employer-employee matched dataset of all priva
 
 **[Economics of Greenfield Urban Planning](/files/Economics%20of%20Greenfield%20Urban%20Planning.pdf)** August, 2026  
 _With Vernon Henderson, Guy Michaels, Martina Manara, and Tanner Regan_ <br>
+**LSE Impact Award, 2026** <br>
 <details>
 <summary><strong>Abstract</strong></summary>
 <p>
