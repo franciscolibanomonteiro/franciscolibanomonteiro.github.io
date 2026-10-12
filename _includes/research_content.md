@@ -16,17 +16,7 @@ Minimum wages (MW) can strongly compress current wage inequality by raising wage
 <details>
 <summary><strong>Abstract</strong></summary>
 <p>
-
-This paper proposes a population subgroup decomposition of aggregate income mobility measures, such as intra(inter)generational elasticity, rank-rank slope, or correlation coefficient. Mobility is a variance-and-population-share weighted average of each subgroup’s mobility, plus a term reflecting differences in the groups’ average incomes.
-
-Using this decomposition, changes in mobility over time can be attributed to:
-1) changes in the population shares of the subgroups — compositional changes,  
-2) changes in the subgroup variance — inequality shifts,  
-3) changes in subgroup income level differences — group gap dynamics, and  
-4) changes in within-subgroup mobility — within churning.
-
-I apply this formula using a rich employer-employee matched dataset of all private sector workers in Portugal from 1986 to 2019 and explore population subdivisions along the lines of gender, age, geography, industry, and education. I find a significant decline in intragenerational mobility during this period, mainly attributable to within-subgroup changes in mobility. Despite significant compositional changes in the labor force toward groups with lower mobility — increased female participation, aging, urbanization, servicification, and educational upskilling — the impact on aggregate mobility is relatively small.
-
+An economy’s income mobility can change substantially over time. However, a substantial decline in population income mobility may either be the result of a decline in mobility within population subgroups, or of a growing share of population subgroups that are less mobile, such as women and older workers. This paper offers an exact decomposition of changes in mobility over time. Population mobility is not a simple weighted average of subgroup mobilities. As a result, beyond compositional dynamics in the labor force, the dynamics of inequality and of between-group gaps also matter for aggregate population mobility. I apply the decomposition to Portugal, an economy whose income mobility declined between 1986 and 2019 and which displays considerable heterogeneity in mobility across groups, using administrative data on the universe of private-sector workers. Population income mobility fell by around 10 percent over the period. No single grouping of workers tells the story on its own: only within fine-grained groups, such as workers of the same age and education, does churning stay flat, revealing that the decline is driven by structural shifts between groups instead.
 </p>
 </details>
 <br>
