@@ -1,8 +1,13 @@
 ---
-layout: single
-title: "Teaching"
+layout: null
 permalink: /teaching/
-author_profile: true
+sitemap: false
 ---
-
-{% include teaching_content.md %}
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Francisco Libano-Monteiro</title>
+<link rel="canonical" href="https://franciscolibanomonteiro.github.io/#teaching">
+<meta http-equiv="refresh" content="0; url=/#teaching">
+<meta name="robots" content="noindex">
+</head><body><p>Moved to <a href="/#teaching">franciscolibanomonteiro.github.io/#teaching</a>.</p>
+<script>location.replace("/#teaching");</script></body></html>
