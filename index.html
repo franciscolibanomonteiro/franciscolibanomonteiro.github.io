@@ -51,8 +51,8 @@ permalink: /
     --ink:    #151513;
     --muted:  #56544E;
     --faint:  #8C877E;
-    --accent: #6E5A40;   /* warm brown links */
-    --accent-hover: #4A3B28;
+    --accent: #94592B;   /* links: warm rust-brown, distinct from body and grey text */
+    --accent-hover: #6B3E1C;
     --rule:   #E7E1D6;
   }
   * { box-sizing: border-box; }
@@ -70,7 +70,7 @@ permalink: /
 
   .nobr { white-space: nowrap; }
   .intro-text a, .evals a, .prize a {
-    text-decoration: underline; text-decoration-color: rgba(110, 90, 64, 0.35);
+    text-decoration: underline; text-decoration-color: rgba(148, 89, 43, 0.4);
     text-decoration-thickness: 1px; text-underline-offset: 3px;
   }
   .intro-text a:hover, .evals a:hover, .prize a:hover { text-decoration-color: currentColor; }
@@ -117,7 +117,7 @@ permalink: /
   /* ---- Papers ---- */
   .paper + .paper { margin-top: 34px; }
   .paper-title { margin: 0; font-weight: 600; font-size: 18.5px; line-height: 1.5; }
-  .paper-title a { color: var(--ink); }
+  .paper-title a { color: var(--accent); }
   .paper-title a:hover { color: var(--accent-hover); }
   .when { font-weight: 400; color: var(--muted); }
   .status { font-weight: 400; color: var(--muted); }
@@ -136,7 +136,7 @@ permalink: /
   .abstract { margin: 12px 0 2px; color: #2E2D29; font-size: 16.5px; line-height: 1.72; }
   .abstract p { margin: 0 0 12px; }
   .abstract p:last-child { margin-bottom: 0; }
-  .soon { margin: 6px 0 0; font-size: 15.5px; font-style: italic; color: var(--faint); }
+  .abstract .soon { margin: 0; font-style: italic; color: var(--faint); }
 
   /* ---- Teaching ---- */
   .course + .course { margin-top: 26px; }
@@ -190,7 +190,6 @@ permalink: /
           <p>I am a PhD candidate at the London School of Economics working on <strong>income dynamics and inequality</strong> and how redistributive policies can have very different current and lifetime impacts on low-income workers.</p>
           <p>I also work on the dynamics of urban development and the design and economics of urban planning.</p>
           <p class="jm">I am on the 2026/27 economics job market.</p>
-          <p>You can download my <a href="/files/CV_FranciscoLibanoMonteiro.pdf">CV</a> and reach me at <a class="nobr" href="mailto:m.f.libano-monteiro@lse.ac.uk">m.f.libano-monteiro@lse.ac.uk</a></p>
         </div>
       </div>
 
@@ -227,7 +226,6 @@ permalink: /
           <p class="authors">With Vernon Henderson, Guy Michaels, Martina Manara, and Tanner Regan</p>
           <p class="prize"><a href="https://info.lse.ac.uk/staff/services/engagement-and-impact/impact-prize-2025">LSE Impact Prize</a>, 2025</p>
           <div class="actions">
-            <a href="/files/Economics%20of%20Greenfield%20Urban%20Planning.pdf">Paper</a>
             <details>
               <summary>Abstract</summary>
               <div class="abstract">
@@ -242,7 +240,6 @@ permalink: /
           <p class="authors">With Johannes Emmerling, Davide Furceri, Prakash Loungani, Jonathan Ostry, Pietro Pizzuto, Massimo Tavoni</p>
           <p class="series">IMF Working Paper 2021/119</p>
           <div class="actions">
-            <a href="/files/wpiea2021119-print-pdf.pdf">Paper</a>
             <details>
               <summary>Abstract</summary>
               <div class="abstract">
@@ -259,7 +256,12 @@ permalink: /
 
         <article class="paper">
           <p class="paper-title">Taxing the Snapshot: Welfare Costs of Setting Progressivity Based on Cross-Sectional Inequality</p>
-          <p class="soon">Abstract coming soon.</p>
+          <div class="actions">
+            <details>
+              <summary>Abstract</summary>
+              <div class="abstract"><p class="soon">Coming soon.</p></div>
+            </details>
+          </div>
         </article>
 
         <article class="paper">
@@ -268,8 +270,11 @@ permalink: /
           <div class="actions">
             <a href="/files/Dynamics_of_Greenfield_Development_Slides.pdf">Slides</a>
             <a href="https://www.youtube.com/watch?v=ngF0-FqzKQA">Video</a>
+            <details>
+              <summary>Abstract</summary>
+              <div class="abstract"><p class="soon">Coming soon.</p></div>
+            </details>
           </div>
-          <p class="soon">Abstract coming soon.</p>
         </article>
       </div>
       </div>
