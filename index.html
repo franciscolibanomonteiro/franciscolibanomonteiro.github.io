@@ -44,335 +44,275 @@ permalink: /
 <link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-  /* Palette and type follow the CV: ink, stone, muted navy, hairline rules */
   :root {
-    --ink:   #1A1A1A;
-    --stone: #6E6E6E;
-    --link:  #31517A;
-    --link-hover: #1D3A5E;
-    --rule:  #E3DFD7;
-    --bg:    #FFFFFF;
-    --label-col: 150px;
-    --gutter: 32px;
+    --bg:     #FEFCF9;   /* warm paper */
+    --ink:    #151513;
+    --muted:  #56544E;
+    --faint:  #8C877E;
+    --accent: #6E5A40;   /* warm brown links */
+    --accent-hover: #4A3B28;
+    --rule:   #E7E1D6;
   }
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
   body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: "EB Garamond", Garamond, Georgia, "Times New Roman", serif;
-    font-size: 19px;
-    line-height: 1.6;
-    font-variant-numeric: oldstyle-nums proportional-nums;
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Lora", Georgia, "Times New Roman", serif;
+    font-size: 18px; line-height: 1.75;
   }
-  a { color: var(--link); text-decoration: none; }
-  a:hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
-  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 2px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--accent-hover); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 
-  .wrap { max-width: 900px; margin: 0 auto; padding: 64px 32px 72px; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 72px 28px 80px; }
 
-  /* ---- Masthead ---- */
-  .masthead { display: flex; align-items: center; gap: 28px; }
-  .portrait { width: 116px; height: 116px; border-radius: 50%; object-fit: cover; flex: none; }
-  .who h1 {
-    margin: 0; font-weight: 400; font-size: 36px; line-height: 1.15;
-    letter-spacing: 0.035em;
-  }
-  .who .affil { margin: 6px 0 0; color: var(--stone); font-size: 18px; }
-  .who .contact { margin: 8px 0 0; font-size: 16px; }
   .nobr { white-space: nowrap; }
-  .sc { font-variant-caps: all-small-caps; letter-spacing: 0.09em; }
-  .contact .sep { color: var(--rule); margin: 0 0.45em; }
+  .intro-text a, .evals a, .prize a {
+    text-decoration: underline; text-decoration-color: rgba(110, 90, 64, 0.35);
+    text-decoration-thickness: 1px; text-underline-offset: 3px;
+  }
+  .intro-text a:hover, .evals a:hover, .prize a:hover { text-decoration-color: currentColor; }
+
+  /* ---- Header ---- */
+  header h1 { margin: 0; font-weight: 300; font-size: 42px; line-height: 1.15; letter-spacing: -0.005em; }
+  .affil {
+    margin: 12px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.6;
+    text-transform: uppercase; letter-spacing: 0.16em;
+  }
+  .affil .dot { margin: 0 0.6em; color: var(--faint); }
+  .contact { margin: 6px 0 0; font-size: 15.5px; color: var(--muted); }
+  .contact .sep { margin: 0 0.55em; color: var(--rule); }
 
   /* ---- Navigation ---- */
-  .tabs {
-    display: flex; gap: 30px; margin: 40px 0 0; padding: 14px 0 0 calc(var(--label-col) + var(--gutter));
-    border-top: 1px solid var(--rule);
+  nav { display: flex; flex-wrap: wrap; gap: 6px 28px; margin: 36px 0 0; padding: 0 0 14px; border-bottom: 1px solid var(--rule); }
+  nav a {
+    color: var(--muted); font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.16em;
+    padding-bottom: 4px; border-bottom: 1px solid transparent;
   }
-  .tabs a {
-    color: var(--stone); font-size: 17px; padding-bottom: 3px;
-    font-variant-caps: all-small-caps; letter-spacing: 0.1em;
-    border-bottom: 1px solid transparent;
-  }
-  .tabs a:hover { color: var(--ink); text-decoration: none; }
-  .tabs a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--link); }
+  nav a:hover { color: var(--ink); text-decoration: none; }
+  nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--ink); }
 
-  /* ---- Panels (all visible without JavaScript) ---- */
+  /* ---- Panels: all visible if JavaScript is off ---- */
   .js .panel { display: none; }
   .js .panel.active { display: block; }
-  .panel { padding-top: 18px; }
+  .panel { padding-top: 40px; }
 
-  /* ---- Two-column rows with margin labels, as on the CV ---- */
-  .row {
-    display: grid; grid-template-columns: var(--label-col) 1fr; column-gap: var(--gutter);
-    padding: 26px 0 0;
+  .section-label {
+    margin: 0 0 22px; font-size: 12.5px; font-weight: 600; line-height: 1.5;
+    text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink);
   }
-  .label {
-    margin: 0; text-align: right; color: var(--stone); font-size: 15px; line-height: 1.6;
-    font-weight: 400; font-variant-caps: all-small-caps; letter-spacing: 0.13em; padding-top: 3px;
-  }
-  .body > :first-child { margin-top: 0; }
-  .body p { margin: 0 0 14px; }
-  .lead strong { font-weight: 600; }
-  .jm-line { font-weight: 600; }
+  .group + .group { margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--rule); }
+
+  /* ---- Home ---- */
+  .intro { display: flex; gap: 32px; align-items: flex-start; }
+  .portrait { width: 148px; height: 148px; border-radius: 50%; object-fit: cover; flex: none; margin-top: 6px; }
+  .intro-text p { margin: 0 0 16px; }
+  .intro-text p:last-child { margin-bottom: 0; }
+  .jm { font-weight: 600; }
+
+  .research { margin-top: 52px; padding-top: 40px; border-top: 1px solid var(--rule); scroll-margin-top: 24px; }
 
   /* ---- Papers ---- */
-  .paper + .paper { margin-top: 26px; }
-  .body .paper p { margin: 0; }            /* beat the generic .body p spacing */
-  .body .paper .meta { margin-top: 1px; }
-  .body .paper .honour { margin-top: 1px; }
-  .body .paper .abstract p { margin: 0 0 10px; }
-  .body .paper .abstract p:last-child { margin-bottom: 0; }
-  .paper-title { margin: 0; font-weight: 600; font-size: 19.5px; line-height: 1.4; }
+  .paper + .paper { margin-top: 34px; }
+  .paper-title { margin: 0; font-weight: 600; font-size: 18.5px; line-height: 1.5; }
   .paper-title a { color: var(--ink); }
-  .paper-title a:hover { color: var(--link-hover); }
-  .tag { color: var(--stone); font-weight: 400; }
-  .meta { margin: 2px 0 0; color: var(--stone); font-size: 17px; line-height: 1.5; }
-  .meta em { font-style: italic; }
-  .honour { margin: 3px 0 0; font-size: 17px; }
-  .honour a { font-style: italic; }
-  .links { margin: 6px 0 0; font-size: 16px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 18px; }
-  .links a, .links summary { font-variant-caps: all-small-caps; letter-spacing: 0.1em; }
-
-  details { margin: 0; }
-  details > summary {
-    list-style: none; cursor: pointer; color: var(--link); display: inline;
+  .paper-title a:hover { color: var(--accent-hover); }
+  .when { font-weight: 400; color: var(--muted); }
+  .status { font-weight: 400; color: var(--muted); }
+  .authors { margin: 2px 0 0; font-style: italic; color: var(--muted); font-size: 16.5px; line-height: 1.6; }
+  .series { margin: 0; color: var(--muted); font-size: 16.5px; }
+  .prize { margin: 4px 0 0; font-size: 16.5px; font-weight: 600; }
+  .actions { margin: 8px 0 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 22px; }
+  .actions a, .actions summary {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent);
   }
+  details > summary { list-style: none; cursor: pointer; display: inline; }
   details > summary::-webkit-details-marker { display: none; }
-  details > summary::after { content: " +"; font-variant-caps: normal; color: var(--stone); }
+  details > summary::after { content: " +"; letter-spacing: 0; }
   details[open] > summary::after { content: " \2212"; }
-  .abstract {
-    margin: 10px 0 4px; padding-left: 16px; border-left: 2px solid var(--rule);
-    font-size: 17.5px; line-height: 1.62; max-width: 66ch;
-  }
-  .abstract.soon { color: var(--stone); font-style: italic; }
-
-  /* ---- References grid ---- */
-  .refs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 24px; }
-  .ref .name { font-weight: 600; }
-  .ref .aff, .ref .mail { font-size: 15.5px; line-height: 1.45; }
-  .ref .aff { color: var(--stone); }
+  details[open] { flex-basis: 100%; }
+  .abstract { margin: 12px 0 2px; color: #2E2D29; font-size: 16.5px; line-height: 1.72; }
+  .abstract p { margin: 0 0 12px; }
+  .abstract p:last-child { margin-bottom: 0; }
+  .soon { margin: 6px 0 0; font-size: 15.5px; font-style: italic; color: var(--faint); }
 
   /* ---- Teaching ---- */
-  .course + .course { margin-top: 18px; }
-  .course-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
-  .course-head .title { font-weight: 600; }
-  .course-head .code { font-weight: 400; }
-  .years { color: var(--stone); font-size: 17px; white-space: nowrap; }
-  .evals { margin-top: 2px; font-size: 16.5px; }
-  .evals .k { color: var(--stone); }
-  .evals .dot { color: var(--rule); margin: 0 0.35em; }
+  .course + .course { margin-top: 26px; }
+  .course-title { margin: 0; font-weight: 600; }
+  .course-title .yrs { font-weight: 400; color: var(--muted); }
+  .role { margin: 0; color: var(--muted); font-size: 16.5px; }
+  .role em { font-style: italic; }
+  .evals { margin: 2px 0 0; font-size: 16.5px; color: var(--muted); }
+  .evals .dot { margin: 0 0.35em; color: var(--faint); }
 
-  /* ---- Footer ---- */
-  footer {
-    margin-top: 56px; padding-top: 14px; border-top: 1px solid var(--rule);
-    color: var(--stone); font-size: 15px; padding-left: calc(var(--label-col) + var(--gutter));
-  }
+  footer { margin-top: 64px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--faint); font-size: 13.5px; }
 
-  /* ---- Small screens: labels stack above content ---- */
-  @media (max-width: 720px) {
-    .label:empty { display: none; }
-    body { font-size: 18px; }
-    .wrap { padding: 36px 22px 56px; }
-    .masthead { gap: 18px; }
-    .portrait { width: 84px; height: 84px; }
-    .who h1 { font-size: 28px; }
-    .tabs { padding-left: 0; gap: 24px; margin-top: 28px; }
-    .row { grid-template-columns: 1fr; padding-top: 22px; }
-    .label { text-align: left; padding: 0 0 6px; }
-    .refs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    footer { padding-left: 0; }
+  @media (max-width: 640px) {
+    body { font-size: 17px; }
+    .wrap { padding: 44px 22px 56px; }
+    header h1 { font-size: 34px; }
+    .affil .dot, .contact .sep { display: none; }
+    .affil span, .contact a { display: block; }
+    nav { gap: 6px 22px; margin-top: 28px; }
+    .panel { padding-top: 30px; }
+    .intro { flex-direction: column; gap: 20px; }
+    .portrait { width: 116px; height: 116px; margin-top: 0; }
   }
-  @media (max-width: 420px) { .refs { grid-template-columns: 1fr; } }
-  @media print { .tabs { display: none; } .js .panel { display: block; } }
+  @media print { nav { display: none; } .js .panel { display: block; } }
 </style>
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 <div class="wrap">
 
-  <header class="masthead">
-    <img class="portrait" src="/images/phd_picture_lowres.jpg" alt="Francisco Libano-Monteiro" width="116" height="116">
-    <div class="who">
-      <h1>Francisco <span class="nobr">Libano&#8209;Monteiro</span></h1>
-      <p class="affil">PhD Candidate in Economics, London School of Economics</p>
-      <p class="contact sc">
-        <a href="mailto:m.f.libano-monteiro@lse.ac.uk">Email</a><span class="sep">|</span><a href="/files/CV_FranciscoLibanoMonteiro.pdf">CV</a><span class="sep">|</span><a href="https://scholar.google.co.uk/citations?user=YHtSUGIAAAAJ">Google Scholar</a>
-      </p>
-    </div>
+  <header>
+    <h1>Francisco <span class="nobr">Libano&#8209;Monteiro</span></h1>
+    <p class="affil"><span class="nobr">PhD Candidate in Economics</span><span class="dot">·</span><span class="nobr">London School of Economics</span></p>
+    <p class="contact"><a class="nobr" href="mailto:m.f.libano-monteiro@lse.ac.uk">m.f.libano-monteiro@lse.ac.uk</a><span class="sep">|</span><a class="nobr" href="https://scholar.google.co.uk/citations?user=YHtSUGIAAAAJ">Google Scholar</a></p>
   </header>
 
-  <nav class="tabs" aria-label="Sections">
-    <a href="#about" data-tab="about">About</a>
-    <a href="#research" data-tab="research">Research</a>
-    <a href="#teaching" data-tab="teaching">Teaching</a>
+  <nav aria-label="Sections">
+    <a href="#home" data-nav="home">Home</a>
+    <a href="#research" data-nav="research">Research</a>
+    <a href="#teaching" data-nav="teaching">Teaching</a>
+    <a href="/files/CV_FranciscoLibanoMonteiro.pdf">CV</a>
   </nav>
 
   <main>
 
-    <!-- ============================ ABOUT ============================ -->
-    <section id="panel-about" class="panel" aria-label="About">
-
-      <div class="row">
-        <h2 class="label" aria-hidden="true"></h2>
-        <div class="body lead">
+    <!-- ============================== HOME ============================== -->
+    <section id="panel-home" class="panel" aria-label="Home">
+      <div class="intro">
+        <img class="portrait" src="/images/phd_picture_lowres.jpg" alt="Francisco Libano-Monteiro" width="148" height="148">
+        <div class="intro-text">
           <p>I am a PhD candidate at the London School of Economics working on <strong>income dynamics and inequality</strong> and how redistributive policies can have very different current and lifetime impacts on low-income workers.</p>
           <p>I also work on the dynamics of urban development and the design and economics of urban planning.</p>
-          <p class="jm-line">I am on the 2026/27 economics job market.</p>
-          <p class="meta">Supervisors: <a href="https://www.wouterdenhaan.com/">Wouter Den Haan</a> and <a href="https://www.xavierjaravel.com/">Xavier Jaravel</a></p>
+          <p class="jm">I am on the 2026/27 economics job market.</p>
+          <p>You can download my <a href="/files/CV_FranciscoLibanoMonteiro.pdf">CV</a> and reach me at <a class="nobr" href="mailto:m.f.libano-monteiro@lse.ac.uk">m.f.libano-monteiro@lse.ac.uk</a></p>
         </div>
       </div>
 
-      <div class="row">
-        <h2 class="label">Job Market Paper</h2>
-        <div class="body">
-          <article class="paper">
-            <p class="paper-title">Does the Minimum Wage Reduce Inequality? Current vs Lifetime Perspectives</p>
-            <div class="links">
-              <details>
-                <summary>Abstract</summary>
-                <p class="abstract">Minimum wages (MW) can strongly compress current wage inequality by raising wages and earnings at the bottom, but do present gains to low-wage workers persist over their lifetime or do they come at the expense of lower future earnings? Using administrative records covering the universe of private-sector employment in Portugal, I study a 16.2% real increase in the national MW from 2006 to 2010 followed by a plateau until 2014. By 2010, workers earning the MW in 2006 experienced wage and earnings growth 10 percentage points higher than they would have had the MW stayed at the 2006 level, but only 4 percentage points remained by 2014. Spillover gains for workers initially above the floor in 2006 faded almost completely by 2014. This dissipation is not explained by adverse employment or hours effects, or by adverse changes in workers' careers due to the policy. Instead, workers rapidly grow out of minimum-wage exposure and spend only a small fraction of their working lives near the floor. A statistical wage process, estimated from stable pre-reform wage dynamics and the reform's treatment effects, allows me to extrapolate beyond the eight-year empirical horizon and quantify the policy's incidence on lifetime inequality. The policy raises the lowest percentiles of lifetime earnings by about 5%, compared with 16.2% for current earnings. Finally, upward income mobility does not necessarily weaken the case for the policy when individuals cannot insure themselves, since the policy provides insurance against spending time at the bottom of the wage distribution.</p>
-              </details>
-            </div>
-          </article>
-        </div>
+      <div id="research" class="research">
+
+      <div class="group">
+        <h2 class="section-label">Job Market Paper</h2>
+        <article class="paper">
+          <p class="paper-title">Does the Minimum Wage Reduce Inequality? Current vs Lifetime Perspectives</p>
+          <div class="actions">
+            <details>
+              <summary>Abstract</summary>
+              <div class="abstract"><p>Minimum wages (MW) can strongly compress current wage inequality by raising wages and earnings at the bottom, but do present gains to low-wage workers persist over their lifetime or do they come at the expense of lower future earnings? Using administrative records covering the universe of private-sector employment in Portugal, I study a 16.2% real increase in the national MW from 2006 to 2010 followed by a plateau until 2014. By 2010, workers earning the MW in 2006 experienced wage and earnings growth 10 percentage points higher than they would have had the MW stayed at the 2006 level, but only 4 percentage points remained by 2014. Spillover gains for workers initially above the floor in 2006 faded almost completely by 2014. This dissipation is not explained by adverse employment or hours effects, or by adverse changes in workers' careers due to the policy. Instead, workers rapidly grow out of minimum-wage exposure and spend only a small fraction of their working lives near the floor. A statistical wage process, estimated from stable pre-reform wage dynamics and the reform's treatment effects, allows me to extrapolate beyond the eight-year empirical horizon and quantify the policy's incidence on lifetime inequality. The policy raises the lowest percentiles of lifetime earnings by about 5%, compared with 16.2% for current earnings. Finally, upward income mobility does not necessarily weaken the case for the policy when individuals cannot insure themselves, since the policy provides insurance against spending time at the bottom of the wage distribution.</p></div>
+            </details>
+          </div>
+        </article>
       </div>
 
-      <div class="row">
-        <h2 class="label">References</h2>
-        <div class="body refs">
-          <div class="ref"><div class="name">Wouter Den Haan</div><div class="aff">London School of Economics</div><div class="mail"><a href="mailto:w.denhaan@lse.ac.uk">w.denhaan@lse.ac.uk</a></div></div>
-          <div class="ref"><div class="name">Xavier Jaravel</div><div class="aff">London School of Economics</div><div class="mail"><a href="mailto:x.jaravel@lse.ac.uk">x.jaravel@lse.ac.uk</a></div></div>
-          <div class="ref"><div class="name">Ricardo Reis</div><div class="aff">London School of Economics</div><div class="mail"><a href="mailto:r.a.reis@lse.ac.uk">r.a.reis@lse.ac.uk</a></div></div>
-          <div class="ref"><div class="name">Alan Manning</div><div class="aff">London School of Economics</div><div class="mail"><a href="mailto:a.manning@lse.ac.uk">a.manning@lse.ac.uk</a></div></div>
-          <div class="ref"><div class="name">Vernon Henderson</div><div class="aff">London School of Economics</div><div class="mail"><a href="mailto:j.v.henderson@lse.ac.uk">j.v.henderson@lse.ac.uk</a></div></div>
-        </div>
-      </div>
-    </section>
+      <div class="group">
+        <h2 class="section-label">Working Papers</h2>
 
-    <!-- =========================== RESEARCH =========================== -->
-    <section id="panel-research" class="panel" aria-label="Research">
+        <article class="paper">
+          <p class="paper-title">Decomposing Changes in Income Mobility</p>
+          <div class="actions">
+            <details>
+              <summary>Abstract</summary>
+              <div class="abstract"><p>An economy’s income mobility can change substantially over time. However, a substantial decline in population income mobility may either be the result of a decline in mobility within population subgroups, or of a growing share of population subgroups that are less mobile, such as women and older workers. This paper offers an exact decomposition of changes in mobility over time. Population mobility is not a simple weighted average of subgroup mobilities. As a result, beyond compositional dynamics in the labor force, the dynamics of inequality and of between-group gaps also matter for aggregate population mobility. I apply the decomposition to Portugal, an economy whose income mobility declined between 1986 and 2019 and which displays considerable heterogeneity in mobility across groups, using administrative data on the universe of private-sector workers. Population income mobility fell by around 10 percent over the period. No single grouping of workers tells the story on its own: only within fine-grained groups, such as workers of the same age and education, does churning stay flat, revealing that the decline is driven by structural shifts between groups instead.</p></div>
+            </details>
+          </div>
+        </article>
 
-      <div class="row">
-        <h2 class="label">Job Market Paper</h2>
-        <div class="body">
-          <article class="paper">
-            <p class="paper-title">Does the Minimum Wage Reduce Inequality? Current vs Lifetime Perspectives</p>
-            <div class="links">
-              <details>
-                <summary>Abstract</summary>
-                <p class="abstract">Minimum wages (MW) can strongly compress current wage inequality by raising wages and earnings at the bottom, but do present gains to low-wage workers persist over their lifetime or do they come at the expense of lower future earnings? Using administrative records covering the universe of private-sector employment in Portugal, I study a 16.2% real increase in the national MW from 2006 to 2010 followed by a plateau until 2014. By 2010, workers earning the MW in 2006 experienced wage and earnings growth 10 percentage points higher than they would have had the MW stayed at the 2006 level, but only 4 percentage points remained by 2014. Spillover gains for workers initially above the floor in 2006 faded almost completely by 2014. This dissipation is not explained by adverse employment or hours effects, or by adverse changes in workers' careers due to the policy. Instead, workers rapidly grow out of minimum-wage exposure and spend only a small fraction of their working lives near the floor. A statistical wage process, estimated from stable pre-reform wage dynamics and the reform's treatment effects, allows me to extrapolate beyond the eight-year empirical horizon and quantify the policy's incidence on lifetime inequality. The policy raises the lowest percentiles of lifetime earnings by about 5%, compared with 16.2% for current earnings. Finally, upward income mobility does not necessarily weaken the case for the policy when individuals cannot insure themselves, since the policy provides insurance against spending time at the bottom of the wage distribution.</p>
-              </details>
-            </div>
-          </article>
-        </div>
-      </div>
+        <article class="paper">
+          <p class="paper-title"><a href="/files/Economics%20of%20Greenfield%20Urban%20Planning.pdf">Economics of Greenfield Urban Planning</a> <span class="status">(Submitted)</span> <span class="when">August, 2026</span></p>
+          <p class="authors">With Vernon Henderson, Guy Michaels, Martina Manara, and Tanner Regan</p>
+          <p class="prize"><a href="https://info.lse.ac.uk/staff/services/engagement-and-impact/impact-prize-2025">LSE Impact Prize</a>, 2025</p>
+          <div class="actions">
+            <a href="/files/Economics%20of%20Greenfield%20Urban%20Planning.pdf">Paper</a>
+            <details>
+              <summary>Abstract</summary>
+              <div class="abstract">
+                <p>Urban planning has shaped cities for millennia, demarcating property rights and mitigating coordination failures, but its rigidities often conflict with market-driven development, which reflects preferences. Although planning is widespread in high-income countries, rapidly growing cities in the developing world are characterized by urban informality. Despite its importance, urban planning lacks an economic framework to evaluate planners’ choices. This paper offers a starting framework and applies it to a flagship project in Dar es Salaam, Tanzania, which partitioned greenfield land on the urban fringe into more than 36,000 formal plots that people purchased and built homes on.</p>
+                <p>To study this project, we assemble a novel dataset using administrative records, satellite imagery, and primary surveys. We develop and estimate a dynamic model in which planning design constrains the decisions of households of varying incomes to sort into formal areas. This model complements our reduced-form analysis, which uses within-neighborhood variation and spatial RD to study planning choices’ effects.</p>
+                <p>We find that the project secured property rights and access, raised land values relative to unplanned areas, and attracted highly educated owners. Within project areas, access to main paved roads, gridded layouts, and natural amenities are valued; plot development and public service provision have been slow; and the price elasticity of bare land with respect to plot size is -0.5. Counterfactual analysis using the model shows that while land value maximization involves the provision of larger plots, welfare maximization entails the provision of smaller plots to serve more lower-income people.</p>
+              </div>
+            </details>
+          </div>
+        </article>
 
-      <div class="row">
-        <h2 class="label">Working Papers</h2>
-        <div class="body">
-
-          <article class="paper">
-            <p class="paper-title">Decomposing Changes in Income Mobility</p>
-            <div class="links">
-              <details>
-                <summary>Abstract</summary>
-                <p class="abstract">An economy’s income mobility can change substantially over time. However, a substantial decline in population income mobility may either be the result of a decline in mobility within population subgroups, or of a growing share of population subgroups that are less mobile, such as women and older workers. This paper offers an exact decomposition of changes in mobility over time. Population mobility is not a simple weighted average of subgroup mobilities. As a result, beyond compositional dynamics in the labor force, the dynamics of inequality and of between-group gaps also matter for aggregate population mobility. I apply the decomposition to Portugal, an economy whose income mobility declined between 1986 and 2019 and which displays considerable heterogeneity in mobility across groups, using administrative data on the universe of private-sector workers. Population income mobility fell by around 10 percent over the period. No single grouping of workers tells the story on its own: only within fine-grained groups, such as workers of the same age and education, does churning stay flat, revealing that the decline is driven by structural shifts between groups instead.</p>
-              </details>
-            </div>
-          </article>
-
-          <article class="paper">
-            <p class="paper-title"><a href="/files/Economics%20of%20Greenfield%20Urban%20Planning.pdf">Economics of Greenfield Urban Planning</a> <span class="tag">(Submitted)</span></p>
-            <p class="meta">with Vernon Henderson, Guy Michaels, Martina Manara and Tanner Regan, August 2026</p>
-            <p class="honour"><a href="https://info.lse.ac.uk/staff/services/engagement-and-impact/impact-prize-2025">LSE Impact Prize, 2025</a></p>
-            <div class="links">
-              <a href="/files/Economics%20of%20Greenfield%20Urban%20Planning.pdf">Paper</a>
-              <details>
-                <summary>Abstract</summary>
-                <div class="abstract">
-                  <p>Urban planning has shaped cities for millennia, demarcating property rights and mitigating coordination failures, but its rigidities often conflict with market-driven development, which reflects preferences. Although planning is widespread in high-income countries, rapidly growing cities in the developing world are characterized by urban informality. Despite its importance, urban planning lacks an economic framework to evaluate planners’ choices. This paper offers a starting framework and applies it to a flagship project in Dar es Salaam, Tanzania, which partitioned greenfield land on the urban fringe into more than 36,000 formal plots that people purchased and built homes on.</p>
-                  <p>To study this project, we assemble a novel dataset using administrative records, satellite imagery, and primary surveys. We develop and estimate a dynamic model in which planning design constrains the decisions of households of varying incomes to sort into formal areas. This model complements our reduced-form analysis, which uses within-neighborhood variation and spatial RD to study planning choices’ effects.</p>
-                  <p>We find that the project secured property rights and access, raised land values relative to unplanned areas, and attracted highly educated owners. Within project areas, access to main paved roads, gridded layouts, and natural amenities are valued; plot development and public service provision have been slow; and the price elasticity of bare land with respect to plot size is −0.5. Counterfactual analysis using the model shows that while land value maximization involves the provision of larger plots, welfare maximization entails the provision of smaller plots to serve more lower-income people.</p>
-                </div>
-              </details>
-            </div>
-          </article>
-
-          <article class="paper">
-            <p class="paper-title"><a href="/files/wpiea2021119-print-pdf.pdf">Will the Economic Impact of COVID-19 Persist? Prognosis from 21st Century Pandemics</a> <span class="tag">(Pre-PhD)</span></p>
-            <p class="meta">with Johannes Emmerling, Davide Furceri, Prakash Loungani, Jonathan D. Ostry, Pietro Pizzuto and Massimo Tavoni<br><em>IMF Working Paper 2021/119</em>, April 2021</p>
-            <div class="links">
-              <a href="/files/wpiea2021119-print-pdf.pdf">Paper</a>
-              <details>
-                <summary>Abstract</summary>
-                <div class="abstract">
-                  <p>COVID-19 has had a disruptive economic impact in 2020, but how long its impact will persist remains unclear. We offer a prognosis based on an analysis of the effects of five previous major epidemics in this century. We find that these pandemics led to significant and persistent reductions in disposable income, along with increases in unemployment, income inequality and public debt-to-GDP ratios.</p>
-                  <p>Energy use and CO₂ emissions dropped, but mostly because of the persistent decline in the level of economic activity rather than structural changes in the energy sector. Applying our empirical estimates to project the impact of COVID-19, we foresee significant scarring in economic performance and income distribution through 2025, which could be associated with an increase in poverty of about 75 million people. Policy responses more effective than those in the past would be required to forestall these outcomes.</p>
-                </div>
-              </details>
-            </div>
-          </article>
-
-        </div>
+        <article class="paper">
+          <p class="paper-title"><a href="/files/wpiea2021119-print-pdf.pdf">Will the Economic Impact of COVID-19 Persist? Prognosis from 21st Century Pandemics</a> <span class="status">(Pre-PhD)</span> <span class="when">April, 2021</span></p>
+          <p class="authors">With Johannes Emmerling, Davide Furceri, Prakash Loungani, Jonathan Ostry, Pietro Pizzuto, Massimo Tavoni</p>
+          <p class="series">IMF Working Paper 2021/119</p>
+          <div class="actions">
+            <a href="/files/wpiea2021119-print-pdf.pdf">Paper</a>
+            <details>
+              <summary>Abstract</summary>
+              <div class="abstract">
+                <p>COVID-19 has had a disruptive economic impact in 2020, but how long its impact will persist remains unclear. We offer a prognosis based on an analysis of the effects of five previous major epidemics in this century. We find that these pandemics led to significant and persistent reductions in disposable income, along with increases in unemployment, income inequality and public debt-to-GDP ratios.</p>
+                <p>Energy use and CO₂ emissions dropped, but mostly because of the persistent decline in the level of economic activity rather than structural changes in the energy sector. Applying our empirical estimates to project the impact of COVID-19, we foresee significant scarring in economic performance and income distribution through 2025, which could be associated with an increase in poverty of about 75 million people. Policy responses more effective than those in the past would be required to forestall these outcomes.</p>
+              </div>
+            </details>
+          </div>
+        </article>
       </div>
 
-      <div class="row">
-        <h2 class="label">Work in Progress</h2>
-        <div class="body">
-          <article class="paper">
-            <p class="paper-title">Taxing the Snapshot: Welfare Costs of Setting Progressivity Based on Cross-Sectional Inequality</p>
-          </article>
-          <article class="paper">
-            <p class="paper-title">Dynamics of Greenfield Development</p>
-            <p class="meta">with Vernon Henderson, Guy Michaels, Martina Manara and Tanner Regan</p>
-            <div class="links">
-              <a href="/files/Dynamics_of_Greenfield_Development_Slides.pdf">Slides</a>
-              <a href="https://www.youtube.com/watch?v=ngF0-FqzKQA">Video</a>
-            </div>
-          </article>
-        </div>
+      <div class="group">
+        <h2 class="section-label">Work in Progress</h2>
+
+        <article class="paper">
+          <p class="paper-title">Taxing the Snapshot: Welfare Costs of Setting Progressivity Based on Cross-Sectional Inequality</p>
+          <p class="soon">Abstract coming soon.</p>
+        </article>
+
+        <article class="paper">
+          <p class="paper-title">Dynamics of Greenfield Development</p>
+          <p class="authors">With Vernon Henderson, Guy Michaels, Martina Manara, and Tanner Regan</p>
+          <div class="actions">
+            <a href="/files/Dynamics_of_Greenfield_Development_Slides.pdf">Slides</a>
+            <a href="https://www.youtube.com/watch?v=ngF0-FqzKQA">Video</a>
+          </div>
+          <p class="soon">Abstract coming soon.</p>
+        </article>
+      </div>
       </div>
     </section>
 
-    <!-- =========================== TEACHING =========================== -->
+    <!-- ============================ TEACHING ============================ -->
     <section id="panel-teaching" class="panel" aria-label="Teaching">
 
-      <div class="row">
-        <h2 class="label">London School of Economics</h2>
-        <div class="body">
-          <div class="course">
-            <div class="course-head"><span class="title"><span class="code">EC325</span> Public Economics</span><span class="years">2022–2026</span></div>
-            <div class="meta">Course Manager and Class Teacher. Lecturers: Camille Landais, Kate Smith</div>
-            <div class="evals"><span class="k">Evaluations:</span> <a href="/files/evaluations/EC325_2025-26.pdf">2025/26 (5/5)</a><span class="dot">·</span><a href="/files/evaluations/EC325_2024-25.pdf">2024/25 (4.9/5)</a><span class="dot">·</span><a href="/files/evaluations/EC325_2023-24.pdf">2023/24 (4.8/5)</a><span class="dot">·</span><a href="/files/evaluations/EC325_2022-23.pdf">2022/23 (4.9/5)</a></div>
-          </div>
-          <div class="course">
-            <div class="course-head"><span class="title"><span class="code">EC400</span> Static Optimization and Fixed Points; Dynamic Programming and Differential Equations</span><span class="years">2023, 2024</span></div>
-            <div class="meta">Class Teacher. Lecturers: Francesco Nava, Dmitry Mukhin</div>
-            <div class="evals"><span class="k">Evaluations:</span> <a href="/files/evaluations/EC400_2024.pdf">2024 (5/5)</a><span class="dot">·</span><a href="/files/evaluations/EC400_2023.pdf">2023 (4.8/5)</a></div>
-          </div>
-          <div class="course">
-            <div class="course-head"><span class="title"><span class="code">EC210</span> Macroeconomic Principles</span><span class="years">2021–2022</span></div>
-            <div class="meta">Class Teacher. Lecturers: Ricardo Reis, Kevin Sheedy</div>
-            <div class="evals"><span class="k">Evaluations:</span> <a href="/files/evaluations/EC210_2021-22.pdf">2021/22 (4.5/5)</a></div>
-          </div>
+      <div class="group">
+        <h2 class="section-label">London School of Economics</h2>
+
+        <div class="course">
+          <p class="course-title">EC325 – Public Economics <span class="yrs">(2022/26)</span></p>
+          <p class="role"><em>Course Manager and Class Teacher</em> — Lecturers: Camille Landais, Kate Smith</p>
+          <p class="evals">Evaluations: <a href="/files/evaluations/EC325_2025-26.pdf">2025/26 (5/5)</a><span class="dot">·</span><a href="/files/evaluations/EC325_2024-25.pdf">2024/25 (4.9/5)</a><span class="dot">·</span><a href="/files/evaluations/EC325_2023-24.pdf">2023/24 (4.8/5)</a><span class="dot">·</span><a href="/files/evaluations/EC325_2022-23.pdf">2022/23 (4.9/5)</a></p>
+        </div>
+
+        <div class="course">
+          <p class="course-title">EC400 – Static Optimization and Fixed Points; Dynamic Programming and Differential Equations <span class="yrs">(2023, 2024)</span></p>
+          <p class="role"><em>Class Teacher</em> — Lecturers: Francesco Nava, Dmitry Mukhin</p>
+          <p class="evals">Evaluations: <a href="/files/evaluations/EC400_2024.pdf">2024 (5/5)</a><span class="dot">·</span><a href="/files/evaluations/EC400_2023.pdf">2023 (4.8/5)</a></p>
+        </div>
+
+        <div class="course">
+          <p class="course-title">EC210 – Macroeconomic Principles <span class="yrs">(2021/22)</span></p>
+          <p class="role"><em>Class Teacher</em> — Lecturers: Ricardo Reis, Kevin Sheedy</p>
+          <p class="evals">Evaluations: <a href="/files/evaluations/EC210_2021-22.pdf">2021/22 (4.5/5)</a></p>
         </div>
       </div>
 
-      <div class="row">
-        <h2 class="label">LSE Summer School</h2>
-        <div class="body">
-          <div class="course">
-            <div class="course-head"><span class="title"><span class="code">EC202</span> Macroeconomics</span><span class="years">2024, 2025</span></div>
-            <div class="meta">Class Teacher. Lecturer: Kevin Sheedy</div>
-          </div>
-          <div class="course">
-            <div class="course-head"><span class="title"><span class="code">EC270</span> Public Finance</span><span class="years">2025</span></div>
-            <div class="meta">Class Teacher. Lecturers: Kate Smith, Pasquale Schiraldi</div>
-          </div>
+      <div class="group">
+        <h2 class="section-label">LSE Summer School</h2>
+
+        <div class="course">
+          <p class="course-title">EC202 – Macroeconomics <span class="yrs">(2024, 2025)</span></p>
+          <p class="role"><em>Class Teacher</em> — Lecturer: Kevin Sheedy</p>
+        </div>
+
+        <div class="course">
+          <p class="course-title">EC270 – Public Finance <span class="yrs">(2025)</span></p>
+          <p class="role"><em>Class Teacher</em> — Lecturers: Kate Smith, Pasquale Schiraldi</p>
         </div>
       </div>
     </section>
@@ -384,29 +324,29 @@ permalink: /
 
 <script>
   (function () {
-    var tabs = ["about", "research", "teaching"];
-    var links = document.querySelectorAll(".tabs a");
-    function show(name) {
-      if (tabs.indexOf(name) < 0) name = "about";
-      tabs.forEach(function (t) {
-        document.getElementById("panel-" + t).classList.toggle("active", t === name);
+    var links = document.querySelectorAll("nav a[data-nav]");
+    function route(nav, fromClick) {
+      if (["home", "research", "teaching"].indexOf(nav) < 0) nav = "home";
+      var panel = nav === "teaching" ? "teaching" : "home";
+      ["home", "teaching"].forEach(function (p) {
+        document.getElementById("panel-" + p).classList.toggle("active", p === panel);
       });
       links.forEach(function (a) {
-        if (a.dataset.tab === name) a.setAttribute("aria-current", "page");
+        if (a.dataset.nav === nav) a.setAttribute("aria-current", "page");
         else a.removeAttribute("aria-current");
       });
+      if (nav === "research") document.getElementById("research").scrollIntoView({ block: "start" });
+      else if (fromClick) window.scrollTo(0, 0);
     }
-    function fromHash() { show((location.hash || "#about").slice(1)); }
+    function fromHash() { route((location.hash || "#home").slice(1), false); }
     links.forEach(function (a) {
       a.addEventListener("click", function (e) {
         e.preventDefault();
-        history.pushState(null, "", "#" + a.dataset.tab);
-        show(a.dataset.tab);
-        window.scrollTo(0, 0);
+        history.pushState(null, "", "#" + a.dataset.nav);
+        route(a.dataset.nav, true);
       });
     });
     window.addEventListener("popstate", fromHash);
-    window.addEventListener("hashchange", fromHash);
     fromHash();
   })();
 </script>
