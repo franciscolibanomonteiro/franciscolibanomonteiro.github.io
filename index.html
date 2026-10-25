@@ -106,8 +106,12 @@ permalink: /
   .group + .group { margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--rule); }
 
   /* ---- Home ---- */
-  .intro { display: flex; gap: 32px; align-items: flex-start; }
-  .portrait { width: 148px; height: 148px; border-radius: 50%; object-fit: cover; flex: none; margin-top: 6px; }
+  .intro { display: flex; gap: 36px; align-items: flex-start; }
+  .portrait {
+    width: 240px; height: 300px; flex: none; margin-top: 6px;
+    object-fit: cover; border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(60, 42, 25, 0.16), 0 1px 3px rgba(60, 42, 25, 0.10);
+  }
   .intro-text p { margin: 0 0 16px; }
   .intro-text p:last-child { margin-bottom: 0; }
   .jm { font-weight: 600; }
@@ -158,7 +162,7 @@ permalink: /
     nav { gap: 6px 22px; margin-top: 28px; }
     .panel { padding-top: 30px; }
     .intro { flex-direction: column; gap: 20px; }
-    .portrait { width: 116px; height: 116px; margin-top: 0; }
+    .portrait { width: 200px; height: 250px; margin-top: 0; }
   }
   @media print { nav { display: none; } .js .panel { display: block; } }
 </style>
@@ -185,7 +189,7 @@ permalink: /
     <!-- ============================== HOME ============================== -->
     <section id="panel-home" class="panel" aria-label="Home">
       <div class="intro">
-        <img class="portrait" src="/images/phd_picture_lowres.jpg" alt="Francisco Libano-Monteiro" width="148" height="148">
+        <img class="portrait" src="/images/portrait.jpg" alt="Francisco Libano-Monteiro" width="240" height="300">
         <div class="intro-text">
           <p>I am a PhD candidate at the London School of Economics working on <strong>income dynamics and inequality</strong> and how redistributive policies can have very different current and lifetime impacts on low-income workers.</p>
           <p>I also work on the dynamics of urban development and the design and economics of urban planning.</p>
