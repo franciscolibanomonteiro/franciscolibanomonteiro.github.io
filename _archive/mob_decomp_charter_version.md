@@ -1,0 +1,7 @@
+Archived 31 Oct 2026: wrong version of the mobility paper's abstract, taken from
+Downloads/mob_decomp_paper_clean_charter.pdf and briefly live on the site and CV.
+The correct version is Dropbox/mob_decomp/overnight_handoff/mob_decomp_paper_clean.pdf.
+
+Title: Decomposing Changes in Income Mobility Over Time
+
+Income mobility is usually reported as a single scalar — a rank-rank slope, an intragenerational elasticity, a correlation coefficient — and movements in that scalar are read as evidence that individuals have become more or less stuck. Such a measure, however, combines the persistence of income within population subgroups with the persistence of the income gaps between them. I derive an exact decomposition of the level of any slope-based mobility measure into these two parts, and a closed-form four-channel identity for its change over time: within-group mobility, compositional shifts, inequality shifts, and group-gap dynamics. Applied to the universe of Portuguese private-sector workers over 1986–2019, a period of pronounced feminization, ageing and educational upskilling, the framework shows that mobility within finely defined demographic cells barely moved: grouping workers jointly by gender, age and education leaves the within component flat while population persistence rises by 0.065. The decline is carried instead by the structure around the churning — who is in which cell, how much of the wage distribution each cell spans, and how far apart the cells sit.
