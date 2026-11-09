@@ -66,7 +66,7 @@ permalink: /
   a:hover { color: var(--accent-hover); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
   a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 
-  .wrap { max-width: 720px; margin: 0 auto; padding: 72px 28px 80px; }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 72px 28px 80px; }
 
   .nobr { white-space: nowrap; }
   .intro-text a, .evals a, .prize a {
@@ -108,7 +108,7 @@ permalink: /
   /* ---- Home ---- */
   .intro { display: flex; gap: 36px; align-items: flex-start; }
   .portrait {
-    width: 240px; height: 300px; flex: none; margin-top: 6px;
+    width: 260px; height: 325px; flex: none; margin-top: 0;
     object-fit: cover; border-radius: 10px;
     box-shadow: 0 6px 20px rgba(60, 42, 25, 0.16), 0 1px 3px rgba(60, 42, 25, 0.10);
   }
@@ -137,7 +137,7 @@ permalink: /
   details > summary::after { content: " +"; letter-spacing: 0; }
   details[open] > summary::after { content: " \2212"; }
   details[open] { flex-basis: 100%; }
-  .abstract { margin: 12px 0 2px; color: #2E2D29; font-size: 16.5px; line-height: 1.72; }
+  .abstract { margin: 12px 0 2px; max-width: 760px; color: #2E2D29; font-size: 16.5px; line-height: 1.72; }
   .abstract p { margin: 0 0 12px; }
   .abstract p:last-child { margin-bottom: 0; }
   .abstract .soon { margin: 0; font-style: italic; color: var(--faint); }
@@ -189,7 +189,7 @@ permalink: /
     <!-- ============================== HOME ============================== -->
     <section id="panel-home" class="panel" aria-label="Home">
       <div class="intro">
-        <img class="portrait" src="/images/portrait.jpg?v=2" alt="Francisco Libano-Monteiro" width="240" height="300">
+        <img class="portrait" src="/images/portrait.jpg?v=2" alt="Francisco Libano-Monteiro" width="260" height="325">
         <div class="intro-text">
           <p>I am a PhD candidate at the <strong>London School of Economics</strong>, where I am affiliated with the <a href="https://www.lse.ac.uk/CFM">Centre for Macroeconomics</a>.</p>
           <p>My research interests are at the intersection of <strong>macroeconomics</strong>, <strong>labor economics</strong> and <strong>public economics</strong>. I work on topics such as income dynamics, inequality and the effects of redistributive policies.</p>
